@@ -50,18 +50,58 @@ struct AgentRequest: ParsableArguments {
     }
 }
 
+struct AgentRequestPreset: Identifiable, Hashable {
+    let id = UUID()
+    let title: String
+    let command: String
+    let description: String
+}
+
 struct ArgumentParserDemoView: View {
     @State private var input = "summarize --detail detailed --review"
     @State private var parsedSummary = "Try a command such as 'summarize --detail detailed --review'."
     @State private var errorMessage: String?
 
+    private let presets: [AgentRequestPreset] = [
+        AgentRequestPreset(
+            title: "Summarize",
+            command: "summarize --detail detailed --review",
+            description: "Useful for a quick review of a draft before sharing it."
+        ),
+        AgentRequestPreset(
+            title: "Plan",
+            command: "plan --detail concise",
+            description: "Good for turning a rough idea into a short next-step checklist."
+        ),
+        AgentRequestPreset(
+            title: "Explain",
+            command: "explain --detail standard",
+            description: "Helpful when you want a beginner-friendly breakdown of a concept."
+        )
+    ]
+
     var body: some View {
         NavigationStack {
             Form {
                 Section("Try a structured request") {
+                    Picker("Preset", selection: $input) {
+                        ForEach(presets, id: \ .id) { preset in
+                            Text(preset.title).tag(preset.command)
+                        }
+                    }
+                    .pickerStyle(.menu)
+
                     TextField("Command", text: $input, axis: .vertical)
                         .textFieldStyle(.roundedBorder)
                         .lineLimit(1...4)
+
+                    ForEach(presets, id: \ .id) { preset in
+                        if input == preset.command {
+                            Text(preset.description)
+                                .font(.footnote)
+                                .foregroundStyle(.secondary)
+                        }
+                    }
 
                     Button("Parse request") {
                         parseInput()
