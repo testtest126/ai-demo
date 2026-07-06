@@ -25,7 +25,7 @@ struct Core_AI_Language_Model_TestApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            RootTabView()
         }
         .modelContainer(sharedModelContainer)
     }
