@@ -36,6 +36,8 @@ Core AI Language Model Test/
 
 The app showcases Apple's on-device **Foundation Models** framework:
 
+- Reference: [Adding intelligent app features with generative models](https://developer.apple.com/documentation/FoundationModels/adding-intelligent-app-features-with-generative-models)
+
 - **Chat** (`ChatDemoView`) — streaming conversation with `LanguageModelSession.streamResponse(to:)`, session prewarming, availability handling (Apple Intelligence eligibility, model download state), and session reset.
 - **Guided Generation** (`GuidedGenerationDemoView`) — structured output using `@Generable`/`@Guide`: the model fills a typed `TripPlan` struct (title, destination, days, activities) streamed as `PartiallyGenerated` snapshots.
 
