@@ -160,8 +160,9 @@ struct DynamicProfileDemoView: View {
                 .padding()
             }
             .navigationTitle("Dynamic Profiles")
-            .toolbar {
-                ToolbarItem(placement: .topBarTrailing) {
+            .safeAreaInset(edge: .top) {
+                HStack {
+                    Spacer()
                     Button("Reset") {
                         let profile = AgentProfile.forMode(selectedMode)
                         session = LanguageModelSession(instructions: profile.instructions)
@@ -171,6 +172,8 @@ struct DynamicProfileDemoView: View {
                     }
                     .disabled(session.isResponding)
                 }
+                .padding(.horizontal)
+                .padding(.top, 4)
             }
         }
     }

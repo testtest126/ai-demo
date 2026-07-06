@@ -29,6 +29,17 @@
 		59EA83702FFBEB7600D590D1 /* Core AI Language Model TestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Core AI Language Model TestUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin XCRemoteSwiftPackageReference section */
+		59EA83842FFBEB7600D590D1 /* XCRemoteSwiftPackageReference "swift-argument-parser" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-argument-parser";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.3.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
 		59EA83782FFBEB7600D590D1 /* Exceptions for "Core AI Language Model Test" folder in "Core AI Language Model Test" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
@@ -125,6 +136,7 @@
 			);
 			name = "Core AI Language Model Test";
 			packageProductDependencies = (
+				59EA83862FFBEB7600D590D1 /* XCSwiftPackageProductDependency "ArgumentParser" */,
 			);
 			productName = "Core AI Language Model Test";
 			productReference = 59EA83552FFBEB7500D590D1 /* Core AI Language Model Test.app */;
@@ -208,6 +220,9 @@
 			);
 			mainGroup = 59EA834C2FFBEB7500D590D1;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				59EA83842FFBEB7600D590D1 /* XCRemoteSwiftPackageReference "swift-argument-parser" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 59EA83562FFBEB7500D590D1 /* Products */;
 			projectDirPath = "";
@@ -267,6 +282,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		59EA83862FFBEB7600D590D1 /* XCSwiftPackageProductDependency "ArgumentParser" */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 59EA83842FFBEB7600D590D1 /* XCRemoteSwiftPackageReference "swift-argument-parser" */;
+			productName = "ArgumentParser";
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin PBXTargetDependency section */
 		59EA83682FFBEB7600D590D1 /* PBXTargetDependency */ = {

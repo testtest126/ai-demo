@@ -22,4 +22,12 @@ struct Core_AI_Language_Model_TestTests {
         #expect(planner.instructions != explainer.instructions)
     }
 
+    @Test func argumentParserParsesStructuredAgentRequest() throws {
+        let request = try AgentRequest.parse(["summarize", "--detail", "detailed", "--review"])
+
+        #expect(request.task == "summarize")
+        #expect(request.detail == .detailed)
+        #expect(request.review)
+    }
+
 }
