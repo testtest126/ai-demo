@@ -152,7 +152,7 @@ struct ChatMessage: Identifiable {
     var text: String
 }
 
-private struct ChatBubble: View {
+struct ChatBubble: View {
     let message: ChatMessage
 
     var body: some View {

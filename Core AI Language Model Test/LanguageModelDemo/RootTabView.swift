@@ -17,6 +17,9 @@ struct RootTabView: View {
             Tab("Guided", systemImage: "list.bullet.rectangle") {
                 GuidedGenerationDemoView()
             }
+            Tab("Profiles", systemImage: "sparkles") {
+                DynamicProfileDemoView()
+            }
             Tab("Items", systemImage: "clock") {
                 ContentView()
             }
