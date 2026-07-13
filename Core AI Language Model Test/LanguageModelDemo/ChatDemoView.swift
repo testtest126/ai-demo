@@ -10,6 +10,7 @@ import FoundationModels
 
 struct ChatDemoView: View {
     private let model = SystemLanguageModel.default
+    private let appleDocsURL = URL(string: "https://developer.apple.com/documentation/FoundationModels/adding-intelligent-app-features-with-generative-models")!
 
     @State private var session = LanguageModelSession(
         instructions: "You are a concise, helpful assistant. Keep answers short."
@@ -34,6 +35,11 @@ struct ChatDemoView: View {
             }
             .navigationTitle("Chat")
             .toolbar {
+                ToolbarItem {
+                    Link(destination: appleDocsURL) {
+                        Label("Apple Foundation Models reference", systemImage: "link")
+                    }
+                }
                 ToolbarItem {
                     Button("New Session", systemImage: "arrow.counterclockwise") {
                         resetSession()

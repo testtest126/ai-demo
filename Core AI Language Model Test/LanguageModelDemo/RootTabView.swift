@@ -9,8 +9,6 @@ import SwiftUI
 import SwiftData
 
 struct RootTabView: View {
-    private let appleDocsURL = URL(string: "https://developer.apple.com/documentation/FoundationModels/adding-intelligent-app-features-with-generative-models")!
-
     var body: some View {
         TabView {
             Tab("Chat", systemImage: "bubble.left.and.text.bubble.right") {
@@ -28,14 +26,6 @@ struct RootTabView: View {
             Tab("Items", systemImage: "clock") {
                 ContentView()
             }
-        }
-        .safeAreaInset(edge: .bottom) {
-            Link(destination: appleDocsURL) {
-                Label("Apple Foundation Models reference", systemImage: "link")
-                    .font(.footnote)
-                    .foregroundStyle(.blue)
-            }
-            .padding(.bottom, 8)
         }
     }
 }
