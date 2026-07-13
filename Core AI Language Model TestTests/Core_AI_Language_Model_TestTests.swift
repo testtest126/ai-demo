@@ -6,6 +6,7 @@
 //
 
 import Testing
+import ArgumentParser
 @testable import Core_AI_Language_Model_Test
 
 struct Core_AI_Language_Model_TestTests {
