@@ -1,0 +1,20 @@
+<svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="40%" r="78%"><stop offset="0%" stop-color="#0f1826"/><stop offset="55%" stop-color="#0a1019"/><stop offset="100%" stop-color="#04060a"/></radialGradient>
+    <radialGradient id="spark" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#ffffff"/><stop offset="55%" stop-color="#cfe4ff"/><stop offset="100%" stop-color="#7fb0ff"/></radialGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#6d9bff" stop-opacity="0.55"/><stop offset="100%" stop-color="#6d9bff" stop-opacity="0"/></radialGradient>
+    <radialGradient id="vig" cx="50%" cy="50%" r="62%"><stop offset="60%" stop-color="#000000" stop-opacity="0"/><stop offset="100%" stop-color="#000000" stop-opacity="0.5"/></radialGradient>
+  </defs>
+  <rect width="1024" height="1024" fill="url(#bg)"/>
+  <rect x="312" y="312" width="400" height="400" rx="76" fill="#0d1420" stroke="#33507e" stroke-width="8"/>
+  <g stroke="#4a7bd0" stroke-width="12" stroke-linecap="round">
+    <line x1="404" y1="288" x2="404" y2="256"/><line x1="512" y1="288" x2="512" y2="256"/><line x1="620" y1="288" x2="620" y2="256"/>
+    <line x1="404" y1="736" x2="404" y2="768"/><line x1="512" y1="736" x2="512" y2="768"/><line x1="620" y1="736" x2="620" y2="768"/>
+    <line x1="288" y1="404" x2="256" y2="404"/><line x1="288" y1="512" x2="256" y2="512"/><line x1="288" y1="620" x2="256" y2="620"/>
+    <line x1="736" y1="404" x2="768" y2="404"/><line x1="736" y1="512" x2="768" y2="512"/><line x1="736" y1="620" x2="768" y2="620"/>
+  </g>
+  <circle cx="512" cy="512" r="150" fill="url(#glow)"/>
+  <path d="M512 386 C 512 470, 528 484, 638 512 C 528 540, 512 554, 512 638 C 512 554, 496 540, 386 512 C 496 484, 512 470, 512 386 Z" fill="url(#spark)"/>
+  <path d="M636 612 C 636 642, 642 648, 668 656 C 642 664, 636 670, 636 700 C 636 670, 630 664, 604 656 C 630 648, 636 642, 636 612 Z" fill="#cfe4ff" opacity="0.9"/>
+  <rect width="1024" height="1024" fill="url(#vig)"/>
+</svg>
